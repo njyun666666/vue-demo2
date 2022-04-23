@@ -144,6 +144,7 @@ export default class HelloWorld extends Vue {
 
   getBComValue1() {
     console.log(this.$refs.refBCom.value1);
+    console.log((this.$refs.refBCom as BCom).value1);
     this.$refs.refBCom.countAdd();
   }
 }

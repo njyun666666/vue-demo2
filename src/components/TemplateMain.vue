@@ -1,7 +1,7 @@
 <template>
   <div>
     <header>
-      <h1>template main</h1>
+      <div>template main</div>
     </header>
     <nav>
       <router-link to="/">Home</router-link>

@@ -1,6 +1,6 @@
 <template>
   <div>
-    <h3>custom input</h3>
+    <h2>CustomInput.vue</h2>
     https://vuejs.org/guide/components/events.html#usage-with-v-model
     <br />
     <input v-model="value" type="text" />
