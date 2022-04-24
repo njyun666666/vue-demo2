@@ -21,8 +21,6 @@ import SlotCard from "./SlotCard.vue";
 
 @Options({
   components: { SlotCard, SlotButton },
-  props: {},
-  watch: {},
 })
 export default class SlotDemo extends Vue {}
 </script>

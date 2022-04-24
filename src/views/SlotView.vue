@@ -11,8 +11,6 @@ import { Options, Vue } from "vue-class-component";
 
 @Options({
   components: { SlotDemo },
-  props: {},
-  watch: {},
 })
 export default class SlotView extends Vue {}
 </script>

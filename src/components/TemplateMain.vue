@@ -22,8 +22,6 @@ import { Options, Vue } from "vue-class-component";
 
 @Options({
   components: {},
-  props: {},
-  watch: {},
 })
 export default class TemplateMain extends Vue {}
 </script>

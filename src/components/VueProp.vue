@@ -30,7 +30,7 @@ import BaseInput from "./BaseInput.vue";
 @Options({ components: { BaseInput } })
 export default class VueProp extends Vue {
   @Prop(Number) propNumber!: number;
-  @Prop({ default: "AAA" }) propText!: string;
+  @Prop(String) propText!: string;
   @Ref("aButton") readonly button!: HTMLButtonElement;
   @Ref("baseInputAAA") readonly baseInputAAA!: BaseInput;
 

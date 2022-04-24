@@ -10,8 +10,6 @@ import TestForm from "../components/TestForm.vue";
 
 @Options({
   components: { TestForm },
-  props: {},
-  watch: {},
 })
 export default class FormView extends Vue {}
 </script>

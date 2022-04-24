@@ -37,8 +37,6 @@ import BaseInput from "../components/BaseInput.vue";
 
 @Options({
   components: { CustomInput, UserName, BaseCheckbox, BaseInput },
-  props: {},
-  watch: {},
 })
 export default class CustomView extends Vue {
   aaa = "";
@@ -51,7 +49,7 @@ export default class CustomView extends Vue {
     console.log(username.fullName);
   }
 
-  onFocus(event: any) {
+  onFocus(event: FocusEvent) {
     console.log("view onFocus", event);
   }
 }
