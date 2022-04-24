@@ -32,6 +32,10 @@ const routes: Array<RouteRecordRaw> = [
         path: "/custom",
         component: () => import("../views/CustomView.vue"),
       },
+      {
+        path: "/vueprop",
+        component: () => import("../views/VuePropView.vue"),
+      },
     ],
   },
 ];

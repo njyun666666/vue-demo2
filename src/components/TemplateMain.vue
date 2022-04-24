@@ -9,6 +9,7 @@
       <router-link to="/form">form</router-link>
       <router-link to="/slot">slot</router-link>
       <router-link to="/custom">custom</router-link>
+      <router-link to="/vueprop">vueprop</router-link>
     </nav>
     <div>
       <router-view></router-view>
