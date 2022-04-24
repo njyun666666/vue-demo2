@@ -1,0 +1,22 @@
+{
+  "vue3-ts-component-default": {
+    "prefix": "vue3-ts-component-default",
+    "body": [
+      "<template>",
+      "  <div></div>",
+      "</template>",
+      "",
+      "<script lang=\"ts\">",
+      "import { Options, Vue } from \"vue-class-component\";",
+      "",
+      "@Options()",
+      "export default class ${1:ComponentName} extends Vue {",
+      "",
+      "}",
+      "</script>",
+      "",
+      "<style scoped lang=\"scss\"></style>"
+    ],
+    "description": ""
+  }
+}
