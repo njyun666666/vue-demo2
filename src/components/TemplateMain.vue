@@ -10,6 +10,7 @@
       <router-link to="/slot">slot</router-link>
       <router-link to="/custom">custom</router-link>
       <router-link to="/vueprop">vueprop</router-link>
+      <router-link to="/Login">Login</router-link>
     </nav>
     <div>
       <router-view></router-view>

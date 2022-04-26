@@ -9,7 +9,7 @@
       "<script lang=\"ts\">",
       "import { Options, Vue } from \"vue-class-component\";",
       "",
-      "@Options()",
+      "@Options({})",
       "export default class ${1:ComponentName} extends Vue {",
       "",
       "}",
@@ -18,5 +18,20 @@
       "<style scoped lang=\"scss\"></style>"
     ],
     "description": ""
+  },
+  "vue3-ts-vuex-module": {
+    "prefix": "vue3-ts-vuex-module",
+    "body": [
+      "import { getModule, Module, VuexModule } from \"vuex-module-decorators\";",
+      "import store from \"../index\";",
+      "import modulesNames from \"../modulesNames\";",
+      "",
+      "@Module({ dynamic: true, namespaced: true, store, name: modulesNames.${2:moduleName} })",
+      "class ${1:ModuleName} extends VuexModule {",
+      "  ",
+      "}",
+      "",
+      "export default getModule(${1:ModuleName});"
+    ]
   }
 }
