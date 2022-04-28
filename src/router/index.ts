@@ -1,5 +1,30 @@
-import { createRouter, createWebHistory, RouteRecordRaw } from "vue-router";
+import Loading from "@/store/modules/Loading";
+import {
+  createRouter,
+  createWebHistory,
+  RouteLocationNormalized,
+  RouteRecordRaw,
+} from "vue-router";
 import HomeView from "../views/HomeView.vue";
+
+function timeout() {
+  return new Promise((resolve) => {
+    setTimeout(() => {
+      console.log("2");
+      return resolve(true);
+    }, 1000);
+  });
+}
+
+async function waitSecondGuard(
+  to: RouteLocationNormalized,
+  from: RouteLocationNormalized
+) {
+  console.log("1", to, from);
+  const a = await timeout();
+  console.log("3", a);
+  return true;
+}
 
 const routes: Array<RouteRecordRaw> = [
   {
@@ -19,10 +44,12 @@ const routes: Array<RouteRecordRaw> = [
         // which is lazy-loaded when the route is visited.
         component: () =>
           import(/* webpackChunkName: "about" */ "../views/AboutView.vue"),
+        beforeEnter: [waitSecondGuard],
       },
       {
         path: "/form",
         component: () => import("../views/FormView.vue"),
+        beforeEnter: [waitSecondGuard],
       },
       {
         path: "/slot",
@@ -47,6 +74,16 @@ const routes: Array<RouteRecordRaw> = [
 const router = createRouter({
   history: createWebHistory(process.env.BASE_URL),
   routes,
+});
+
+router.beforeEach(() => {
+  console.log("router.beforeEach");
+  Loading.show(true);
+});
+
+router.afterEach(() => {
+  console.log("router.afterEach");
+  Loading.show(false);
 });
 
 export default router;
