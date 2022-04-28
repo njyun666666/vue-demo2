@@ -22,8 +22,13 @@ class Loading extends VuexModule {
   }
 
   @Action({ rawError: true })
-  show(show: boolean) {
-    this.setLoading(show);
+  show() {
+    this.setLoading(true);
+  }
+
+  @Action({ rawError: true })
+  hide() {
+    this.setLoading(false);
   }
 }
 

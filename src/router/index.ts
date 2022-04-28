@@ -78,12 +78,12 @@ const router = createRouter({
 
 router.beforeEach(() => {
   console.log("router.beforeEach");
-  Loading.show(true);
+  Loading.show();
 });
 
 router.afterEach(() => {
   console.log("router.afterEach");
-  Loading.show(false);
+  Loading.hide();
 });
 
 export default router;
